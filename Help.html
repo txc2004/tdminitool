@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TD - Minitool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TD - MiniTool is a window application, you can have it together with game to folow the progress of the weapons. Setup a game for tests and restore waves.">
+
+
+    <style>
+        body {
+            color: rgb(60, 60, 60);
+            background-color: rgb(240, 240, 240);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: steelblue;
+        }
+
+        h3,
+        p {
+            color: rgb(60, 60, 60);
+        }
+
+        a,
+        i {
+            color: dimgray;
+            text-decoration: none;
+
+        }
+
+        blockquote p {
+            color: gray;
+            /* text-decoration: none; */
+            font-style: italic;
+        }
+
+        div {
+            margin: auto;
+            width: 80%;
+            max-width: 1200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <h1 style="text-align:center;">
+            TD - MiniTool v0.5.1
+        </h1>
+        <p style="text-align:center;">
+            <a href="#TopMenu">Top Menu</a> - <a href="#BuildingsList">Buildings List</a> - <a href="#MiniMap">Mini
+                Map</a> - <a href="#BottomMenu">Bottom Menu</a> - <a href="#Graph">Bars Graph</a>
+        </p>
+        <br>
+        <p style="text-align:center;">
+            TD - MiniTool is a window application, you can have it together with game to see what the weapons output,
+            like: Efficiency, Hits, DamagePerFire, DamagePerSecond, DamageUsed, DamageWasted, CostEfficiency after each
+            wave. You can folow the progress of the weapons each wave with <span data-huuid="5305013448467170977">bars
+                graph. </span>You can also easily setup a game for tests and restore waves.
+        </p>
+
+        <p style="text-align:center;">
+            Download : <a target="_blank" rel="noopener noreferrer"
+                href="https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts">https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts</a>&nbsp;<br>
+            &nbsp;
+        </p>
+        <h2 style="text-align:center;" id="TopMenu">
+            - Top Menu -
+        </h2>
+        <h3 style="text-align:center;">
+            Menu
+        </h3>
+        <ul>
+            <li>
+                <strong>Open</strong>: You can open any Progress.gd files, anywhere located on PC for view or restore
+                it. By default app open the Progress.gd logated on game folder.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Get Data</strong>: get the data from the Open File, decoded and set on clipboard, to pasted them
+                every you like to edit them.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Set Data</strong>: When you edit and copy them, then take it from clipboard recode and return it
+                on Open File.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Hack</strong>: If you have to do tests or Play for Fun, it edit the Open File and add a plenty
+                Supply/Recon/Tech/Health also give x35 each building you have on inventory, also add Basic Weapons or
+                All Weapons.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Opacity</strong>: Can you set the opacity for the app from 60 to 100 by steps of 5. Default is
+                95.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Auto Hide</strong>: The app hide on side when click out of Window, appear when you click on
+                Window.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Restore</strong>: You can go back on previous waves or restore any Progress.gd you have already.
+                It clear the waves when you start a new game and place the first tile.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Help</strong>: It open the Help file.<br>
+                &nbsp;
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                Important! Game must closed before use Set Data/Hack/Restore. Also always make first a Back Up your
+                original Progress.gd.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            Efficiency/Hits
+        </h3>
+        <ul>
+            <li>
+                <p>
+                    <strong>Eff</strong>: You can see the efficiency of Weapons and measured by: <i>(100 / (DamageUsed +
+                        DamageWasted)) * DamageUsed</i>.
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                Buildings with multiply weapons calculated separately, summed and then per number of weapons.
+            </p>
+        </blockquote>
+        <p style="text-align:center;">
+            &nbsp;
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <strong>Hts</strong>: Show the total hits a weapon reach. Examples: If a rifle do 10 shoot on 1
+                    target count as 10 hits. If a splash weapon hit with one bomb 10 targets is again 10 hits.
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                You can switch between Eff/Hts by click on them.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            DamagePerFire/DamagePerFireMax
+        </h3>
+        <ul>
+            <li>
+                <p>
+                    <strong>Dpf</strong>: DamagePerFire of each single fire a weapon do and calculated by:
+                    <i>(DamageUsed + DamageWasted) / HitsCount</i>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+            </li>
+            <li>
+                <strong>DPF</strong>: DamagePerFire include Max Targets and calculated by: <i>((DamageUsed +
+                    DamageWasted) / HitsCount) x MaxTargets</i>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <blockquote>
+            <p style="text-align:center;">
+                You can switch between Dpf/DPF by click on them.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            DamagePerSecond/DamagePerSecondMax
+        </h3>
+        <ul>
+            <li>
+                <p>
+                    <strong>Dps</strong>: DamagePerSecond. Calculated by: <i>(Dpf * magazineSize) / ((magazineSize /
+                        rateOfFire) + reloadTime)</i>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+            </li>
+            <li>
+                <strong>DPS</strong>: DamagePerSecond include Max Targets and calculated by: <i>(DPF * magazineSize) /
+                    ((magazineSize / rateOfFire) + reloadTime)</i>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <blockquote>
+            <p style="text-align:center;">
+                You can switch between Dps/DPS by click on them.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            DamageUsed/DamageTotal
+        </h3>
+        <ul>
+            <li>
+                <strong>Dmg</strong>: &nbsp;DamageUsed by weapon without the DamageWasted.<br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>DMG</strong>: Total damage of a weapon, DamageUsed + DamageWasted.<br>
+                &nbsp;
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                You can switch between Dmg/DMG by click on them.
+            </p>
+            <p style="text-align:center;">
+                For Hts/Dps/DPS/Dpf/DPF/Dmg/DMG Buildings with multiply weapons, calculated separately and summed.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            Cost/Efficiency
+        </h3>
+        <ul>
+            <li>
+                <strong>Cst/Eff - Dpf/DPF</strong>: <i>CostEfficiency / DamagePerFire</i>, <i>CostEfficiency /
+                    DamagePerFireMax</i><br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Cst/Eff - Dps/DPS</strong>: <i>CostEfficiency / DamagePerSecond</i>, <i>CostEfficiency /
+                    DamagePerSecondMax</i><br>
+                &nbsp;
+            </li>
+            <li>
+                <strong>Cst/Eff - Dmg/DMG</strong>: <i>CostEfficiency / DamageUsed</i>, <i>CostEfficiency /
+                    DamageTotal</i><br>
+                &nbsp;
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                The type of Cst/Eff you can choose it on bottom menu.
+            </p>
+            <p style="text-align:center;">
+                The Game count: 1 Recon = 2 Supply, 1 Tech = 250 Supply. The Cst/Eff count that also.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            Sort
+        </h3>
+        <p>
+            Sort the Buildings list by:
+        </p>
+        <ul>
+            <li>
+                <strong>Default</strong>: Place order.
+            </li>
+            <li>
+                <strong>Name</strong>: Buildings Name from A to Z.
+            </li>
+            <li>
+                <strong>Hts/Dps/DPS/Dpf/DPF/Dmg/DMG/Cst/CST</strong>: From higher to lower.<br>
+                &nbsp;
+            </li>
+        </ul>
+        <blockquote>
+            <p style="text-align:center;">
+                You can also quick sort the the items with right mouse button.
+            </p>
+        </blockquote>
+        <h3 style="text-align:center;">
+            <br>
+            Quick Hide
+        </h3>
+        <ul>
+            <li>
+                <strong>&lt;</strong>: It hide the app when you click it.
+            </li>
+        </ul>
+        <h2 style="text-align:center;" id="BuildingsList">
+            <strong>- Buildings List -</strong>
+        </h2>
+        <p>
+            <strong>On list the first column is the header. For Eff show the average and for
+                Hts/Dps/DPS/Dpf/DPF/Dmg/DMG/Cst/CST show the total.</strong><br>
+            <br>
+            <strong>The items after headers is:</strong>
+        </p>
+        <ul>
+            <li>
+                <strong>Infantry: All the Infantry units, Heroes, Grenadiers, Chaplain, Medic.</strong>
+            </li>
+            <li>
+                <strong>Armory: Tanks.</strong>
+            </li>
+            <li>
+                <strong>HQDamage: The Damage take the HQ from foes.</strong>
+            </li>
+            <li>
+                <strong>Blue/Red/Green HQ: HQ weapons, if has.</strong>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <blockquote>
+            <p style="text-align:center;">
+                <strong>If you click on item, can you see on minimap the tile where located.</strong>
+            </p>
+            <p style="text-align:center;">
+                <strong>You can increase the list height and width, by resize the window.</strong>
+            </p>
+        </blockquote>
+        <h2 style="text-align:center;" id="MiniMap">
+            <strong>- Mini Map -</strong>
+        </h2>
+        <ul>
+            <li>
+                <strong>If you click on an tile, you can see on list the buildings is on that tile.</strong>
+            </li>
+            <li>
+                <strong>You can resize the minimap area, on that color spot between list and minimap.</strong>
+            </li>
+            <li>
+                <strong>You can drag the minimap with right mouse button.</strong>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <h2 style="text-align:center;" id="BottomMenu">
+            <strong>- Bottom Menu -</strong>
+        </h2>
+        <ul>
+            <li>
+                <strong>The Basic/Shield/Air show you the damage the weapons can do, as the game shows on GUI if you
+                    have enable them on games settings menu.</strong>
+            </li>
+            <li>
+                <strong>The InGame show you the damage the weapons actual down after the wave end.</strong>
+            </li>
+            <li>
+                <strong>The middle item, it choose the Cost/Eff type.</strong>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <h2 style="text-align:center;" id="Graph">
+            <strong>- Graph -</strong>
+        </h2>
+        <ul>
+            <li>
+                <strong>Coming Soon</strong>
+            </li>
+        </ul>
+        <h2 style="text-align:center;">
+            <strong>- Other Notes -</strong>
+        </h2>
+        <ul>
+            <li>
+                <strong>You can have the app together with game, if you have on settings Window Mode any other except
+                    Exclusive Full Screen.</strong>
+            </li>
+            <li>
+                <strong>For now it read only the current wave, maybe later I add to read each wave and compare
+                    them.</strong>
+            </li>
+            <li>
+                <strong>Only read Active Weapons, not read passive units like HQ
+                    hits/heroes/grenadiers/tanks/fences/barricades.</strong>
+            </li>
+            <li>
+                <strong>If you saw any error massage just click continue. If the error persist. Tell me it on Tower
+                    Dominion Discord @txc2004 with a copy of Progress.gd.</strong>
+            </li>
+        </ul>
+        <p>
+            &nbsp;
+        </p>
+        <blockquote>
+            <p style="text-align:center;">
+                <strong>DamageUsed = DamageDone = The damage where goes on enemy and not wasted on empty
+                    space.</strong><br>
+                <strong>DamageWasted = DamageOverKill = When a weapon not find target and waste the
+                    ammunition.</strong><br>
+                <strong>HitsCount = countThisGame = The numbers of targets the weapon ammunition hit.</strong>
+            </p>
+        </blockquote>
+        <p style="text-align:center;">
+            &nbsp;
+        </p>
+        <p style="text-align:center;">
+            <i><strong>Thank You! :)</strong></i>
+        </p>
+    </div>
+</body>
+
+</html>

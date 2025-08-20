@@ -14,7 +14,7 @@
             color: rgb(60, 60, 60);
             background-color: rgb(240, 240, 240);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            padding: 20px;
+            /* padding: 20px; */
         }
 
         h1,
@@ -25,6 +25,12 @@
         h3,
         p {
             color: rgb(60, 60, 60);
+        }
+
+        h1,
+        h2,
+        h3 {
+            padding-top: 20px;
         }
 
         a,
@@ -43,7 +49,7 @@
         div {
             margin: auto;
             width: 80%;
-            max-width: 1200px;
+            max-width: 960px;
         }
     </style>
 
@@ -57,22 +63,21 @@
         </h1>
         <p style="text-align:center;">
             <a href="#TopMenu">Top Menu</a> - <a href="#BuildingsList">Buildings List</a> - <a href="#MiniMap">Mini
-                Map</a> - <a href="#BottomMenu">Bottom Menu</a> - <a href="#Graph">Bars Graph</a>
+                Map</a> - <a href="#BottomMenu">Bottom Menu</a> - <a href="#GraphBars">Graph Bars</a>
         </p>
-        <p>
-            <br>
-            &nbsp;
-        </p>
+
         <p style="text-align:center;">
-            TD - MiniTool is a window application, you can have it together with game to see what the weapons output,
-            like: Efficiency, Hits, DamagePerFire, DamagePerSecond, DamageUsed, DamageWasted, CostEfficiency after each
-            wave. You can follow the progress of the weapons each wave with <span data-huuid="5305013448467170977">bars
-                graph. </span>You can also easily setup a game for tests and restore waves.
+            <strong>TD - MiniTool is a window application, you can have it together with game to see what the weapons
+                output,
+                like: Efficiency, Hits, DamagePerFire, DamagePerSecond, DamageUsed, DamageWasted, CostEfficiency after
+                each
+                wave. You can follow the progress of the weapons each wave with graph
+                bars. You can also easily setup a game for tests and restore waves.</strong>
         </p>
         <p style="text-align:center;">
             Download : <a target="_blank" rel="noopener noreferrer"
                 href="https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts">https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts</a>&nbsp;<br>
-            &nbsp;
+
         </p>
         <h2 style="text-align:center;" id="TopMenu">
             - Top Menu -
@@ -119,7 +124,6 @@
             </li>
             <li>
                 <strong>Help</strong>: It open the Help file.<br>
-                &nbsp;
             </li>
         </ul>
         <blockquote>
@@ -138,9 +142,6 @@
                     <strong>Eff</strong>: You can see the efficiency of Weapons and measured by: <i>(100 / (DamageUsed +
                         DamageWasted)) * DamageUsed</i>.
                 </p>
-                <p>
-                    &nbsp;
-                </p>
             </li>
         </ul>
         <blockquote>
@@ -157,9 +158,6 @@
                     <strong>Hts</strong>: Show the total hits a weapon reach. Examples: If a rifle do 10 shoot on 1
                     target count as 10 hits. If a splash weapon hit with one bomb 10 targets is again 10 hits.
                 </p>
-                <p>
-                    &nbsp;
-                </p>
             </li>
         </ul>
         <blockquote>
@@ -168,7 +166,6 @@
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             DamagePerFire/DamagePerFireMax
         </h3>
         <ul>
@@ -177,25 +174,19 @@
                     <strong>Dpf</strong>: DamagePerFire of each single fire a weapon do and calculated by:
                     <i>(DamageUsed + DamageWasted) / HitsCount</i>
                 </p>
-                <p>
-                    &nbsp;
-                </p>
+
             </li>
             <li>
                 <strong>DPF</strong>: DamagePerFire include Max Targets and calculated by: <i>((DamageUsed +
                     DamageWasted) / HitsCount) x MaxTargets</i>
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
         <blockquote>
             <p style="text-align:center;">
                 You can switch between Dpf/DPF by click on them.
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             DamagePerSecond/DamagePerSecondMax
         </h3>
         <ul>
@@ -204,25 +195,18 @@
                     <strong>Dps</strong>: DamagePerSecond. Calculated by: <i>(Dpf * magazineSize) / ((magazineSize /
                         rateOfFire) + reloadTime)</i>
                 </p>
-                <p>
-                    &nbsp;
-                </p>
             </li>
             <li>
                 <strong>DPS</strong>: DamagePerSecond include Max Targets and calculated by: <i>(DPF * magazineSize) /
                     ((magazineSize / rateOfFire) + reloadTime)</i>
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
         <blockquote>
             <p style="text-align:center;">
                 You can switch between Dps/DPS by click on them.
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             DamageUsed/DamageTotal
         </h3>
         <ul>
@@ -232,7 +216,6 @@
             </li>
             <li>
                 <strong>DMG</strong>: Total damage of a weapon, DamageUsed + DamageWasted.<br>
-                &nbsp;
             </li>
         </ul>
         <blockquote>
@@ -244,7 +227,6 @@
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             Cost/Efficiency
         </h3>
         <ul>
@@ -261,7 +243,6 @@
             <li>
                 <strong>Cst/Eff - Dmg/DMG</strong>: <i>CostEfficiency / DamageUsed</i>, <i>CostEfficiency /
                     DamageTotal</i><br>
-                &nbsp;
             </li>
         </ul>
         <blockquote>
@@ -273,7 +254,6 @@
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             Sort
         </h3>
         <p>
@@ -288,7 +268,6 @@
             </li>
             <li>
                 <strong>Hts/Dps/DPS/Dpf/DPF/Dmg/DMG/Cst/CST</strong>: From higher to lower.<br>
-                &nbsp;
             </li>
         </ul>
         <blockquote>
@@ -297,7 +276,6 @@
             </p>
         </blockquote>
         <h3 style="text-align:center;">
-            <br>
             Quick Hide
         </h3>
         <ul>
@@ -328,9 +306,6 @@
                 <strong>Blue/Red/Green HQ</strong>: HQ weapons, if has.
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
         <blockquote>
             <p style="text-align:center;">
                 If you click on item, can you see on minimap the tile where located.
@@ -353,9 +328,6 @@
                 You can drag the minimap with right mouse button.
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
         <h2 style="text-align:center;" id="BottomMenu">
             - Bottom Menu -
         </h2>
@@ -371,11 +343,8 @@
                 The middle item, it choose the Cost/Eff type.
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
-        <h2 style="text-align:center;" id="Graph">
-            - Graph -
+        <h2 style="text-align:center;" id="GraphBars">
+            - Graph Bars -
         </h2>
         <ul>
             <li>

@@ -6,15 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="TD - MiniTool is a window application, you can have it together with game to follow the progress of the weapons. Setup a game for tests and restore waves.">
-
+        content="TD - MiniTool is a Windows application that works alongside the game to analyze weapons performance across waves. It also allows you to set up test games and restore waves.">
 
     <style>
         body {
             color: rgb(60, 60, 60);
             background-color: rgb(240, 240, 240);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            /* padding: 20px; */
         }
 
         h1,
@@ -42,14 +40,36 @@
 
         blockquote p {
             color: gray;
-            /* text-decoration: none; */
             font-style: italic;
         }
 
-        div {
+        #main {
             margin: auto;
             width: 80%;
             max-width: 960px;
+        }
+
+        #image {
+            margin: auto;
+            max-width: 760px;
+        }
+
+        img {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 
@@ -57,27 +77,34 @@
 
 <body>
 
-    <div>
+    <div id="main">
         <h1 style="text-align:center;">
-            TD - MiniTool v0.5.1
+            TD - MiniTool v0.6
         </h1>
         <p style="text-align:center;">
             <a href="#TopMenu">Top Menu</a> - <a href="#BuildingsList">Buildings List</a> - <a href="#MiniMap">Mini
                 Map</a> - <a href="#BottomMenu">Bottom Menu</a> - <a href="#GraphBars">Graph Bars</a>
         </p>
-
         <p style="text-align:center;">
-            <strong>TD - MiniTool is a window application, you can have it together with game to see what the weapons
-                output,
-                like: Efficiency, Hits, DamagePerFire, DamagePerSecond, DamageUsed, DamageWasted, CostEfficiency after
-                each
-                wave. You can follow the progress of the weapons each wave with graph
-                bars. You can also easily setup a game for tests and restore waves.</strong>
+            <strong>TD - MiniTool is a Windows application. It can be used alongside the game to analyze weapons
+                performance, including Efficiency, Hits, Damage Per Fire, Damage Per Second, Damage Used, Damage Wasted,
+                and Cost Efficiency after each wave. The tool also provides graphical charts to track weapons progress
+                across waves. Additionally, it allows you to easily set up test games and restore waves.</strong>
         </p>
+        <div id="image" class="row">
+            <div class="column">
+                <img src="image1.png">
+            </div>
+            <div class="column">
+                <img src="image2.png">
+            </div>
+            <div class="column">
+                <img src="image3.png">
+            </div>
+        </div>
         <p style="text-align:center;">
             Download : <a target="_blank" rel="noopener noreferrer"
-                href="https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts">https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts</a>&nbsp;<br>
-
+                href="https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts">https://drive.google.com/drive/folders/1AGb7TPTBk7GUSmtbF4-aY4gLBEcfc3Ts</a>
         </p>
         <h2 style="text-align:center;" id="TopMenu">
             - Top Menu -
@@ -222,7 +249,7 @@
                 You can switch between Dmg/DMG by click on them.
             </p>
             <p style="text-align:center;">
-                For Hts/Dps/DPS/Dpf/DPF/Dmg/DMG Buildings with multiply weapons, calculated separately and summed.
+                For Hts/Dpf/DPF/Dps/DPS/Dmg/DMG Buildings with multiply weapons, calculated separately and summed.
             </p>
         </blockquote>
         <h3 style="text-align:center;">
@@ -266,7 +293,7 @@
                 <strong>Name</strong>: Buildings Name from A to Z.
             </li>
             <li>
-                <strong>Hts/Dps/DPS/Dpf/DPF/Dmg/DMG/Cst/CST</strong>: From higher to lower.<br>
+                <strong>Hts/Dpf/DPF/Dps/DPS/Dmg/DMG/Cst/CST</strong>: From higher to lower.<br>
             </li>
         </ul>
         <blockquote>
@@ -286,10 +313,10 @@
             - Buildings List -
         </h2>
         <p>
-            On list the first column is the header. For Eff show the average and for Hts/Dps/DPS/Dpf/DPF/Dmg/DMG/Cst/CST
+            On list the first column is the header. For Eff show the average and for Hts/Dpf/DPF/Dps/DPS/Dmg/DMG/Cst/CST
             show the total.<br>
             <br>
-            The items after headers is:
+            The items after header is:
         </p>
         <ul>
             <li>
@@ -299,11 +326,15 @@
                 <strong>Armory</strong>: Tanks.
             </li>
             <li>
-                <strong>HQDamage</strong>: The Damage take the HQ from foes.
+                <strong>HQDamage</strong>: The damage take the HQ from foes.
             </li>
             <li>
-                <strong>Blue/Red/Green HQ</strong>: HQ weapons, if has.
+                <strong>Blue/Red/Green HQ</strong>: HQ weapons, if available.
             </li>
+            <li>
+                All others buildings has weapons with their name.
+            </li>
+
         </ul>
         <blockquote>
             <p style="text-align:center;">
@@ -369,9 +400,7 @@
                 Discord @txc2004 with a copy of Progress.gd.
             </li>
         </ul>
-        <p>
-            &nbsp;
-        </p>
+        &nbsp;
         <blockquote>
             <p style="text-align:center;">
                 DamageUsed = DamageDone = The damage where goes on enemy and not wasted on empty space.<br>
@@ -379,9 +408,7 @@
                 HitsCount = countThisGame = The numbers of targets the weapon ammunition hit.
             </p>
         </blockquote>
-        <p style="text-align:center;">
-            &nbsp;
-        </p>
+        &nbsp;
         <p style="text-align:center;">
             <i>Thank You! :)</i>
         </p>

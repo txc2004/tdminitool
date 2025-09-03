@@ -35,7 +35,6 @@
         i {
             color: dimgray;
             text-decoration: none;
-
         }
 
         blockquote p {
@@ -49,37 +48,57 @@
             max-width: 960px;
         }
 
-        #image {
-            margin: auto;
-            max-width: 760px;
-        }
-
-        img {
+        .mainslider {
+            display: flex;
+            justify-content: center;
             padding-top: 10px;
             padding-bottom: 10px;
+
+        }
+
+        .slider {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .slider img {
+            display: none;
+        }
+
+        .slider img.active {
             display: block;
-            margin: auto;
+            margin: 0 auto;
         }
 
-        .column {
-            float: left;
-            width: 33.33%;
+        /* Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: black;
+            background-color: rgb(240, 240, 240);
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem 0.6rem;
         }
 
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
+        .arrow.left {
+            left: -50px;
+        }
+
+        .arrow.right {
+            right: -50px;
         }
     </style>
-
 </head>
 
 <body>
 
     <div id="main">
         <h1 style="text-align:center;">
-            TD - MiniTool v0.6.1
+            TD - MiniTool v0.7
         </h1>
         <p style="text-align:center;">
             <a href="#TopMenu">Top Menu</a> - <a href="#BuildingsList">Buildings List</a> - <a href="#MiniMap">Mini
@@ -93,25 +112,23 @@
                 across waves. Additionally, it allows you to easily set up test games and restore waves.</strong>
         </p>
 
-        <p style="text-align:center;">
-            <strong style="color: red; font-size: larger;">- Not working yet, on newer version of Tower Dominion
-                v1.47-</strong>
-        </p>
+        <div class="mainslider">
 
-        <div id="image" class="row">
-            <div class="column">
-                <img src="image1.png">
-            </div>
-            <div class="column">
+            <div class="slider">
+                <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+                <img src="image1.png" class="active">
                 <img src="image2.png">
-            </div>
-            <div class="column">
                 <img src="image3.png">
+
+                <button class="arrow right" onclick="nextSlide()">&#10095;</button>
             </div>
         </div>
+
+
         <p style="text-align:center;">
             Download: <a target="_blank" rel="noopener noreferrer"
-                href="https://github.com/txc2004/tdminitool/releases/download/0.6.1/TDMiniTool.zip">https://github.com/txc2004/tdminitool/releases/download/0.6.1/TDMiniTool.zip</a>
+                href="https://github.com/txc2004/tdminitool/releases/download/0.7/TDMiniTool.zip">https://github.com/txc2004/tdminitool/releases/download/0.7/TDMiniTool.zip</a>
         </p>
         <h2 style="text-align:center;" id="TopMenu">
             - Top Menu -
@@ -385,8 +402,9 @@
         </h2>
         <ul>
             <li>
-                Coming Soon
-            </li>
+                It track the data from each wave to analyze and compare the weapons performance. App must be open before
+                you start new game to synchronize correct the waves. Otherwise you must adjuast manually them on
+                'TDMiniTool\myFiles\waves'. </li>
         </ul>
         <h2 style="text-align:center;">
             - Other Notes -
@@ -398,15 +416,12 @@
                 Full Screen.
             </li>
             <li>
-                For now it read only the current wave, I work to read each wave and compare them.
+                It read only the acive weapons, not then HQ Damage/Heroes/Grenadiers/Tanks/barricades, i add them
+                again...
             </li>
             <li>
-                It read HQ Damage/Heroes/Grenadiers/Tanks now, still no the barricades.
-            </li>
-            <li>
-                If you saw any error massage just click continue. If the error persist. Please inform me on Tower
-                Dominion
-                Discord @txc2004 with a copy of Progress.gd.
+                The app is on beta version if you any error/bug, please inform me on Tower Dominion Discord @txc2004
+                with a copy of Progress.gd.
             </li>
         </ul>
         &nbsp;
@@ -422,6 +437,27 @@
             <i>Thank You! :)</i>
         </p>
     </div>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll('.slider img');
+
+        function showSlide(index) {
+            slides.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+    </script>
 </body>
 
 </html>
